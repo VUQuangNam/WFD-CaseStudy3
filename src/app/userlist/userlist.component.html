@@ -1,0 +1,11 @@
+<div id="userlist">
+  <ul>
+    <li *ngFor="let item of userService.userList">
+      <a [routerLink]="['', item.id]">{{item.username}}
+        <a *ngIf="item.status">online</a>
+        <a *ngIf="!(item.status)">offline</a>
+      </a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+</div>

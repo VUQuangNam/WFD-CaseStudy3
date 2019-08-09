@@ -1,0 +1,15 @@
+<input type="type" [formControl]="userInput" (change)="onChange()">
+
+<ul>
+  <a *ngFor="let item of userService.userList">
+    <a>{{item.username}}:{{item.content}}
+      <br></a>
+  </a>
+  <a *ngFor="let message of messages; index as i">
+    <a *ngFor="let item of userService.user">
+      <a>{{item.username}}</a> :
+    </a>
+    {{message.content}}  <br>
+  </a>
+
+</ul>
