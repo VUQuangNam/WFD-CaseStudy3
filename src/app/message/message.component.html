@@ -1,15 +1,14 @@
-<input type="type" [formControl]="userInput" (change)="onChange()">
-
-<ul>
-  <a *ngFor="let item of userService.userList">
-    <a>{{item.username}}:{{item.content}}
-      <br></a>
-  </a>
-  <a *ngFor="let message of messages; index as i">
-    <a *ngFor="let item of userService.user">
-      <a>{{item.username}}</a> :
-    </a>
-    {{message.content}}  <br>
-  </a>
-
-</ul>
+<div class="container-fluid">
+  <div class="chat-group row">
+    <div class="col-md-2 side-bar">
+      <h3>Chat group</h3>
+      <ul *ngFor="let user of user">
+        <li style="color: greenyellow; font-size: large;"><a [routerLink]="['/user', user.userName]"
+                                                             style="color: white">{{user.userName}}</a></li>
+      </ul>
+      <ul *ngFor="let item of userService.userList">
+        <a style="color: white" [routerLink]="['', item.id]">{{item.username}}</a>
+      </ul>
+    </div>
+  </div>
+</div>

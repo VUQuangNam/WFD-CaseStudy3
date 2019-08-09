@@ -1,11 +1,17 @@
-<div id="userlist">
-  <ul>
-    <li *ngFor="let item of userService.userList">
-      <a [routerLink]="['', item.id]">{{item.username}}
-        <a *ngIf="item.status">online</a>
-        <a *ngIf="!(item.status)">offline</a>
-      </a>
-    </li>
-  </ul>
-  <router-outlet></router-outlet>
+<div class="window">
+  <div class="window-chat" *ngFor="let item of userService.userList">
+    <div class="alert alert-success">{{item.username}}:{{item.content}}</div>
+  </div>
+  <div class="window-chat" *ngFor="let msg of messages">
+    <div class="alert alert-success ">{{msg.userSend.userName}}:{{msg.content}}</div>
+  </div>
+  <div class="enter">
+    <form class="" (ngSubmit)="addMessage()" [formGroup]="messageForm">
+      <div class="row">
+        <input type="text" formControlName="message" class="input-message col-md-9" [(ngModel)]="content"
+               placeholder="Enter your message">
+        <button type="submit" class="col-md-1 button-send">Send</button>
+      </div>
+    </form>
+  </div>
 </div>

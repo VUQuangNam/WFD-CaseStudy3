@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {User} from "./User";
 
 interface IUser {
   id: string,
@@ -12,15 +13,18 @@ interface IUser {
 })
 export class UserService {
   userList: IUser[] = [
-    {id: '1', username: 'Akhilian', status: true, content: '11111111111'},
-    {id: '2', username: 'supertinou', status: false, content: '222222'},
-    {id: '3', username: 'alex-cory', status: true, content: 'eqeqwewdwd'},
-    {id: '4', username: 'ander', status: false, content: 'asdasdadad'},
+    {id: '1', username: 'Akhilian', status: true, content: 'hello'},
+    {id: '2', username: 'supertinou', status: false, content: 'hello2'},
+    {id: '3', username: 'alex-cory', status: true, content: 'hello13'},
+    {id: '4', username: 'ander', status: false, content: 'hello14'},
   ];
-  user = [{
-    id: '1', username: 'Alex', status: 'online'
+  user: User[] = [{
+    userName: 'account1'
+  }, {
+    userName: 'account2'
   }];
 
   constructor() {
   }
+
 }

@@ -1,4 +1,42 @@
-#userlist {
-  height: 700px;
-  background: aquamarine;
+.enter {
+  position: fixed;
+  width: 50%;
+  bottom: 0;
+  left: 50%;
+
+  .input-message {
+    height: 35px;
+    border-radius: 10px;
+    border: solid 1px #cdcdcd;
+  }
+
+  .input-message:focus {
+    outline: none;
+  }
+
+  .button-send {
+    height: 35px;
+    border-radius: 8px;
+    background-color: royalblue;
+    border: solid 1px royalblue;
+    color: #fff;
+  }
+
+  .button-send:hover {
+    color: #faff39;
+  }
+}
+
+.window {
+  position: absolute;
+  width: 75%;
+  top: 0;
+  left: 20%;
+}
+
+.window-chat {
+  position: relative;
+  top: 0;
+  left: 0;
+  align-content: center;
 }
