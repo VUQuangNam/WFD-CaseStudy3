@@ -11,7 +11,6 @@ export class MessageComponent implements OnInit {
 
   constructor(private userService: UserService) {
   }
-
   ngOnInit() {
   }
 }

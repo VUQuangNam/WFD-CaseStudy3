@@ -36,12 +36,16 @@ export class UserlistComponent implements OnInit {
 
   addMessage() {
     if (this.account1.userName !== this.user) {
-      this.messages.push(new Message(this.account2, this.content));
-    } else {
       this.messages.push(new Message(this.account1, this.content));
     }
+    ;
+
+    // if (this.account2.userName !== this.user) {
+    //   this.messages.push(new Message(this.account2, this.content));
+    // }
     this.content = '';
   }
+
 
 
 }

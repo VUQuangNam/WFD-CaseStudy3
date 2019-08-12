@@ -19,10 +19,12 @@ export class UserService {
     {id: '4', username: 'ander', status: false, content: 'hello14'},
   ];
   user: User[] = [{
-    userName: 'account1'
-  }, {
-    userName: 'account2'
-  }];
+    userName: 'Myaccount'
+  },
+    //   {
+    //   userName: 'account2'
+    // }
+  ];
 
   constructor() {
   }
